@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+    defaultConfig {
+        applicationId "com.zengny.tryoschina"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //product flavors
+    productFlavors {
+
+        oschina {
+            manifestPlaceholders = [UMENG_CHANNEL: "oschina"]
+        }
+
+        google {
+            manifestPlaceholders = [UMENG_CHANNEL: "google"]
+        }
+
+        tencent {
+            manifestPlaceholders = [UMENG_CHANNEL: "tentcent"]
+        }
+
+        wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL: "wandoujia"]
+        }
+
+        xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL: "xiaomi"]
+        }
+
+        huawei {
+            manifestPlaceholders = [UMENG_CHANNEL: "huawei"]
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'net.qiujuer.genius:graphics:2.0.0-beta8'
+    compile 'net.qiujuer.genius:res:2.0.0-beta8'
+    compile 'net.qiujuer.genius:ui:2.0.0-beta8'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    testCompile 'junit:junit:4.12'
+}

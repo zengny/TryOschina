@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    tools:context="com.zengny.tryoschina.improve.main.NavFragment"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+    <com.zengny.tryoschina.improve.main.NavigationButton
+        android:id="@+id/nav_item_news"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/lay_12"
+        android:paddingRight="@dimen/lay_12"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
+
+    <com.zengny.tryoschina.improve.main.NavigationButton
+        android:id="@+id/nav_item_tweet"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/lay_12"
+        android:paddingRight="@dimen/lay_12"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/nav_item_tweet_pub"
+        android:layout_gravity="center"
+        android:contentDescription="@null"
+        android:padding="2dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/g_button_background"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+    <com.zengny.tryoschina.improve.main.NavigationButton
+        android:id="@+id/nav_item_explore"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/lay_12"
+        android:paddingRight="@dimen/lay_12"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
+
+    <com.zengny.tryoschina.improve.main.NavigationButton
+        android:id="@+id/nav_item_me"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/lay_12"
+        android:paddingRight="@dimen/lay_12"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
+</LinearLayout>
